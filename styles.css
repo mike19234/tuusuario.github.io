@@ -1,0 +1,214 @@
+/* General body styling (mantener o ajustar lo que ya tienes) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styling (mantener lo que ya tienes) */
+header {
+    background-color: #215197; /* Your blue color from the image */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-logo {
+    max-width: 100px;
+    height: auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+}
+
+/* Navigation styling (mantener lo que ya tienes) */
+nav {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+.nav-button {
+    display: block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+}
+
+/* --- ESTILOS ESPECÍFICOS DEL CARRUSEL --- */
+.carousel-section {
+    padding: 20px;
+    background-color: #f0f0f0; /* Un fondo ligeramente diferente para la sección del carrusel */
+    text-align: center; /* Centrar el título de la sección */
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%; /* Ancho del carrusel */
+    margin: 20px auto; /* Centrar y darle espacio */
+    overflow: hidden; /* Oculta lo que está fuera del contenedor visible */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+.carousel-track {
+    display: flex; /* Para que los slides se alineen horizontalmente */
+    transition: transform 0.5s ease-in-out; /* Animación de deslizamiento */
+}
+
+.carousel-slide {
+    min-width: 100%; /* Cada slide ocupa el 100% del ancho del contenedor visible */
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+    padding: 20px;
+    text-align: center;
+    flex-shrink: 0; /* Evita que los slides se encojan */
+}
+
+.carousel-slide img {
+    max-width: 80%; /* Limita el tamaño de la imagen dentro del slide */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.carousel-slide h3 {
+    margin-top: 0;
+    color: #215197;
+}
+
+.carousel-slide p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 10; /* Asegura que los botones estén sobre los slides */
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 10px; /* Posiciona los puntos en la parte inferior del contenedor */
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+/* --- FIN ESTILOS ESPECÍFICOS DEL CARRUSEL --- */
+
+/* Section styling (mantener lo que ya tienes para las otras secciones) */
+section:not(.carousel-section) { /* Aplica esto a todas las secciones EXCEPTO la del carrusel */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Footer styling (mantener lo que ya tienes) */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Media Queries para responsividad (ajustar según sea necesario) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .carousel-container {
+        width: 95%;
+    }
+    .carousel-button {
+        padding: 5px 10px;
+        font-size: 1.2em;
+    }
+}
